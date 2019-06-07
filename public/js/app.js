@@ -25,7 +25,7 @@ cotacoesForm.addEventListener('submit', (e) =>{
     day_high.innerText = ''
     day_low.innerText = ''
     
-    fetch(`http://localhost:3000/cotacoes?ativo=${ativo}`).then((res) => {
+    fetch(`/cotacoes?ativo=${ativo}`).then((res) => {
     res.json().then((data) => {
         if(data.error){
             mainMessage.innerHTML = 'Alguma coisa deu errado'
